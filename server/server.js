@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 
 app.get('/usuario', function(req, res) {
     res.json('get usuario')
-})
+});
 
 app.post('/usuario', function(req, res) {
 
@@ -34,7 +34,7 @@ app.post('/usuario', function(req, res) {
             persona: body
         });
     }
-})
+});
 
 app.put('/usuario/:id', function(req, res) {
 
@@ -43,12 +43,12 @@ app.put('/usuario/:id', function(req, res) {
     res.json({
         id
     });
-})
+});
 
 app.delete('/usuario', function(req, res) {
     res.json('delete usuario')
-})
+});
 
 app.listen(process.env.PORT, () => {
     console.log('Escuchando puerto :', process.env.PORT);
-})
+});
